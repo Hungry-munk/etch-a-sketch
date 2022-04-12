@@ -1,5 +1,7 @@
 #gridContainer{
     display: grid;
+    user-select: none;/*made my divs undraggble to ensure mouseup event fires even if a cell is dragged*/
     width: 200px;
-    height: 200px
-}
+    height: 200px;
+    
+};

@@ -1,7 +1,77 @@
-#gridContainer{
+*,*::after,*::after{box-sizing: inherit;}
+
+html{
+    height:100%; /*getting footer to bottom and keeping it mobile friendly*/
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%; /*getting footer to bottom and keeping it mobile friendly*/
+}
+
+.header, .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    padding: 2%;
+    margin-bottom:20px;
+}
+
+.header div{
+    font-size: 75px;
+}
+
+.gridContainer{
     display: grid;
-    user-select: none;/*made my divs undraggble to ensure mouseup event fires even if a cell is dragged*/
+    user-select: none;  /*made my divs undraggble to ensure mouseup event fires even if a cell is dragged */
+    width: 500px;
+    height: 500px;
+}
+
+.gridSideBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
     width: 200px;
-    height: 200px;
-    
-};
+}
+.btn{
+    width: 150px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+#GridSize{
+    height: 10px;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    height: 55px;
+    margin-top: auto;
+}
+
+.fa-github{
+    color: black;
+    position: static;
+    transition: 0.4s ease-in-out;
+}
+.fa-github:hover{
+    transform: scale(1.2) rotate(360deg);   
+}

@@ -4,14 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Etch-a-sketch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7d9e28e2cd.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
-<body>
-   <div id="gridContainer">
 
-   </div> 
+<body>
+<div class="header">
+    <div>WEB-A-SKETCH</div>
+</div>
+
+
+<div class="main">
+    <div class="gridSideBar" >
+        <div>
+            <div class="colourChangers">
+                <input type="color" id="PenColour"style='margin-bottom:15px'>
+                <span class="ColourText">&nbsp&nbsp Pen Colour</span>
+            </div>
+            <div>
+                <input type="color" id="backColour">
+                <span class="ColourText">&nbsp&nbsp background Colour</span>
+            </div>
+        </div>
+
+        <button class="btn">Rainbow</button>
+        <button class="btn">Eraser</button>
+        <button class="btn">Clear</button>
+        <button class="btn">add grid</button>
+
+        <div>
+            <div id="GridSizeText" style="text-align: center; font-size: 25px;"></div>
+            <input type="range" id="GridSize " min="1" max="100">
+        </div>
+    </div>
+    
+    <div class="gridContainer"></div>
+</div>
+
+<footer class="footer">
+    <span style="font-size:1.4em">Made By: Hungry-munk &nbsp</span>
+    <a id='github' href="https://github.com/Hungry-munk/etch-a-sketch">
+        <i class="fa-brands fa-github fa-2x"></i>
+    </a>
+</footer>
+
 </body>
 </html>

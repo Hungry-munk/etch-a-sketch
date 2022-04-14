@@ -31,8 +31,14 @@ body{
 .gridContainer{
     display: grid;
     user-select: none;  /*made my divs undraggble to ensure mouseup event fires even if a cell is dragged */
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;   
+
+    box-shadow: 10px;
+}
+
+.CellGrid{
+    border: 2px solid gray;
 }
 
 .gridSideBar{
@@ -42,6 +48,7 @@ body{
     align-items: center;
     gap: 30px;
     width: 200px;
+
 }
 .btn{
     width: 150px;
@@ -58,7 +65,12 @@ body{
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 20vh;
+    box-shadow: 10px;
+}
 
+.cell:hover{
+    transition: 0.1s ease-in-out;
+    transform: scale(1.1);
 }
 
 .footer{

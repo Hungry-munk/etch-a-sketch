@@ -21,7 +21,6 @@
     <div>WEB-A-SKETCH</div>
 </div>
 
-
 <div class="main">
     <div class="gridSideBar" >
         <div>
@@ -35,16 +34,17 @@
             </div>
         </div>
 
-        <button class="btn mode" id="pen">Colour Pen</button>
-        <button class="btn mode" id="rainbow">Rainbow Pen</button>
-        <button class="btn mode" id="eraser">Eraser</button>
-        <button class="btn">Clear</button>
-        <button class="btn">toggle grid</button>
+        <button class="btn" id="rainbow">toggle rainbow</button>
+        <button class="btn" id="eraser"> toggle Eraser</button>
 
         <div>
             <div id="GridSizeText" style="text-align: center; font-size: 25px;"></div>
-            <input type="range" id="GridSize" value="16" min="1" max="100">
+            <input type="range" id="GridSize" value="16" min="2" max="100">
         </div>
+
+        <button class="btn" id="grid">toggle grid</button>
+        <button class="btn" id="clear">Clear canvas</button>
+
     </div>
     
     <div class="gridContainer"></div>

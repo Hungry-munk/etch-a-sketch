@@ -20,7 +20,7 @@ body{
 }
 
 .header{
-    padding: 2%;
+    padding: 1%;
     margin-bottom:20px;
 }
 
@@ -47,7 +47,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    width: 200px;
+    width: 250px;
 
 }
 .btn{

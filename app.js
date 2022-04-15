@@ -24,12 +24,16 @@ let mouseDown = false;//for deciding if mouse button is being held or not
 gridContainer.onmousedown = ()=>mouseDown= true;//only mousedown on grid
 document.onmouseup = ()=>mouseDown = false;
 
+//slecting buttons
 RainbowBtn.onclick = () =>{
     if (!RainbowPen){
         RainbowPen = true
         Eraser = false
+        RainbowBtn.classList.add('btnOn')
+        EraserBtn.classList.remove('btnOn')
     }else{
         RainbowPen = false
+        RainbowBtn.classList.remove('btnOn')
     };
 };
 
@@ -37,14 +41,19 @@ EraserBtn.onclick = () =>{
     if (!Eraser){
         Eraser = true
         RainbowPen = false
+
+        EraserBtn.classList.add('btnOn')
+        RainbowBtn.classList.remove('btnOn')
     }else{
         Eraser = false
-    }
+        EraserBtn.classList.remove('btnOn')
+    };
 };
 
 ClearBtn.onclick = () =>{
     deleteGrid()
     createGrid(gridSize)
+
 };
 
 GridBtn.onclick = ()=>{
@@ -56,9 +65,9 @@ GridBtn.onclick = ()=>{
     
     if (Grid) Grid=false
     else Grid=true
+
+    GridBtn.classList.toggle('btnOn')
 };
-
-
 
 //changing canvas bg colour
 backColour.oninput = e =>{//change backgorund colour
@@ -131,15 +140,12 @@ function deleteGrid(){
         cell.remove();
     });
 };
+
 function RandomColour(){
     return '#' + Math.floor(Math.random()*16777215).toString(16);
 };
 
-
-
-
 window.onload = ()=>{
     createGrid(16)//making grid originally
     gridSizeText.textContent = `${gridSize} x ${gridSize}`
-
 };

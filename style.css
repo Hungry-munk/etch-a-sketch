@@ -9,8 +9,10 @@ body{
     font-family: 'Bebas Neue', cursive;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0;
     height: 100%; /*getting footer to bottom and keeping it mobile friendly*/
+    background-color: #b8a470;
 }
 
 .header, .footer{
@@ -20,12 +22,13 @@ body{
 }
 
 .header{
-    padding: 1%;
-    margin-bottom:20px;
+    padding: 0;
+    margin: 1%;
+    height: auto;
 }
 
 .header div{
-    font-size: 75px;
+    font-size: 105px;
 }
 
 .gridContainer{
@@ -33,39 +36,97 @@ body{
     user-select: none;  /*made my divs undraggble to ensure mouseup event fires even if a cell is dragged */
     width: 600px;
     height: 600px;   
-
-    box-shadow: 10px;
+    box-shadow:0.8em 0.8em 2em , -0.1em -0.1em 2em; 
 }
 
 .CellGrid{
-    border: 2px solid gray;
+    border: 1px solid grey;
 }
 
 .gridSideBar{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+
     gap: 30px;
     width: 250px;
+    height: 600px; ;
+    padding: 2.5em;
+    background-color: #b49546;
+    box-shadow:0.5em 0.5em 2em , -1px -1px 15px; 
 
 }
 .btn{
-    width: 150px;
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
+    border: 2px solid;
+    border-radius: 6px;
+    background-color: #b49546;
 }
 
-#GridSize{
+.btnOn{
+    background-color: black;
+    color: #b49546;
+}
+
+.options{
+    width: 100%;
+}
+
+input[type='range']{
+    height: 25px;
+    width:100%;
+    background-color: #b49546;
+    outline: none;
+    overflow: hidden;
+    cursor: ew-resize;
+    -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: black;
+    margin-top: -8px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+input[type='range']::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 50px;
     height: 10px;
+   
 }
 
+.colourpick{
+    width:50px;
+    height:50px;
+    overflow: hidden;
+    border-radius:100%;
+}
+input[type='color']{
+    width:100%;
+    height:100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #0000001A;
+    transform: scale(1.5);
+}
+
+.inputClr{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
 .main{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 20vh;
-    box-shadow: 10px;
+    justify-content: center;
+    gap: 6%;
 }
 
 .cell:hover{

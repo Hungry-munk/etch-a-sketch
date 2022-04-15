@@ -24,26 +24,32 @@
 <div class="main">
     <div class="gridSideBar" >
         <div>
-            <div class="colourChangers">
-                <input type="color" id="PenColour"style='margin-bottom:15px'>
-                <span class="ColourText">&nbsp&nbsp Pen Colour</span>
+            <div class="inputClr" style="margin-bottom: 10px;">
+                <div class="colourpick">  
+                    <input type="color" id="PenColour"style='margin-bottom:15px'>
+                </div> 
+                <span class="ColourText">Pen Colour</span>
             </div>
-            <div>
-                <input type="color" id="backColour" value="#FFFFFF">
-                <span class="ColourText">&nbsp&nbsp background Colour</span>
+            
+            <div class="inputClr">
+                <div class="colourpick">
+                    <input type="color" id="backColour" value="#FFFFFF">
+                </div>
+                <span class="ColourText">background Colour</span>
             </div>
+
         </div>
 
-        <button class="btn" id="rainbow">toggle rainbow</button>
-        <button class="btn" id="eraser"> toggle Eraser</button>
+        <button class="btn options" id="rainbow">toggle rainbow</button>
+        <button class="btn options" id="eraser"> toggle Eraser</button>
 
-        <div>
+        <div class="options">
             <div id="GridSizeText" style="text-align: center; font-size: 25px;"></div>
             <input type="range" id="GridSize" value="16" min="2" max="100">
         </div>
 
-        <button class="btn" id="grid">toggle grid</button>
-        <button class="btn" id="clear">Clear canvas</button>
+        <button class="btn options" id="grid">toggle grid</button>
+        <button class="btn options" id="clear">Clear canvas</button>
 
     </div>
     
@@ -51,7 +57,7 @@
 </div>
 
 <footer class="footer">
-    <span style="font-size:1.4em">Made By: Hungry-munk &nbsp</span>
+    <span style="font-size:1.4em; margin: 0;">Made By: Hungry-munk &nbsp</span>
     <a id='github' href="https://github.com/Hungry-munk/etch-a-sketch" target="_blank">
         <i class="fa-brands fa-github fa-2x"></i>
     </a>
